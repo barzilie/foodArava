@@ -1,0 +1,50 @@
+/* styles/globals.css */
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic RTL setup and font */
+html,
+body {
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f8fafc; /* Slightly off-white background (Tailwind gray-50) */
+  color: #374151; /* Default text color (Tailwind gray-700) */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Updated Button Styles based on Logo Colors */
+@layer components {
+  .btn-primary {
+    /* Indigo based on the road color */
+    @apply bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+     /* Lime/Green based on the fields */
+     @apply bg-lime-500 text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-lime-300 transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed;
+     /* Alternative: Light gray button */
+     /* @apply bg-gray-200 text-gray-800 font-semibold py-2 px-5 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition duration-150 ease-in-out; */
+  }
+   .btn-link {
+     /* Use the primary Indigo color for links */
+     @apply text-indigo-600 hover:text-indigo-800 hover:underline focus:outline-none font-medium;
+   }
+   /* Optional: Danger button for delete actions */
+   .btn-danger {
+        @apply bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-150 ease-in-out;
+   }
+}
+

@@ -1,0 +1,36 @@
+{
+    "name": "grocery-app-backend",
+    "version": "1.0.0",
+    "description": "Backend API for the Hebrew Grocery Ordering Web App",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "keywords": [
+        "grocery",
+        "ordering",
+        "api",
+        "node",
+        "express",
+        "mongodb",
+        "hebrew"
+    ],
+    "author": "Your Name / App Name",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^3.0.2",
+        "cloudinary": "^1.41.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "json2csv": "^6.0.0-alpha.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.4.0",
+        "multer": "^1.4.5-lts.1",
+        "multer-storage-cloudinary": "^4.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
+}
